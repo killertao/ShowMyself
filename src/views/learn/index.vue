@@ -5,7 +5,6 @@
   </div>
 </template>
 <script>
-  document.title = "es6 run";
   const obj = {
     a: 1,
     b: 2,
@@ -13,7 +12,7 @@
 
     },
     next: function () {
-      debugger;
+       ;
       let values = Object.values(this);
 
       i++;
@@ -27,7 +26,7 @@
     [Symbol.iterator]: function () {
       return {
         next: function () {
-          debugger;
+           ;
           return {
             value: 1,
             done: true
@@ -65,20 +64,19 @@
   //  for (var value of range(0, 3)) {
   //    console.log(value); // 0, 1, 2
   //  }
-  debugger;
-  for (var item of obj2) {
-    debugger;
-    console.log(item);
-  }
+//  for (var item of obj2) {
+//     ;
+//    console.log(item);
+//  }
   //  let arr = ['a', 'b', 'c'];
-  //  debugger;
+  //   ;
   //  let iter = arr[Symbol.iterator]();
   //
   //  iter.next() // { value: 'a', done: false }
   //  iter.next() // { value: 'b', done: false }
   //  iter.next() // { value: 'c', done: false }
   //  iter.next() // { value: undefined, done: true }
-
+ console.log(1);
   export default {
     name: 'Index',
     data() {

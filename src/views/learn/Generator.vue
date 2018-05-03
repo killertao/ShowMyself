@@ -5,86 +5,69 @@
   </div>
 </template>
 <script>
-  document.title = "es6 run";
-  const obj = {
-    a: 1,
-    b: 2,
-    [Symbol.iterator]: function () {
+//  document.title = "Generator";
+//  function* dataConsumer() {
+//    console.log('Started');
+//    console.log(`1. ${yield 1}`);
+//    console.log(`2. ${yield 2}`);
+//    return 'result';
+//  }
+//
+//  let genObj = dataConsumer();
+//   ;
+//  var s=1;
+//function* fibonacci() {
+//  let [prev, curr] = [0, 1];
+//  for (;;) {
+//    [prev, curr] = [curr, prev + curr];
+//    yield curr;
+//  }
+//}
+//
+//for (let n of fibonacci()) {
+//  if (n > 50) break;
+//  console.log(n);
+//}
 
-    },
-    next: function () {
-      debugger;
-      let values = Object.values(this);
 
-      i++;
-      return {
-        value: values[i] + 4,
-        done: !Boolean(values[i])
-      };
-    }
-  }
-  const obj2 = {
-    [Symbol.iterator]: function () {
-      return {
-        next: function () {
-          debugger;
-          return {
-            value: 1,
-            done: true
-          };
-        }
-      };
-    }
-  };
-  ;
-  //
-  //  class RangeIterator {
-  //    constructor(start, stop) {
-  //      this.value = start;
-  //      this.stop = stop;
-  //    }
-  //
-  //    [Symbol.iterator]() {
-  //      return this;
-  //    }
-  //
-  //    next() {
-  //      var value = this.value;
-  //      if (value < this.stop) {
-  //        this.value++;
-  //        return {done: false, value: value};
-  //      }
-  //      return {done: true, value: undefined};
-  //    }
-  //  }
-  //
-  //  function range(start, stop) {
-  //    return new RangeIterator(start, stop);
-  //  }
 
-  //  for (var value of range(0, 3)) {
-  //    console.log(value); // 0, 1, 2
-  //  }
-  debugger;
-  for (var item of obj2) {
-    debugger;
-    console.log(item);
-  }
-  //  let arr = ['a', 'b', 'c'];
-  //  debugger;
-  //  let iter = arr[Symbol.iterator]();
-  //
-  //  iter.next() // { value: 'a', done: false }
-  //  iter.next() // { value: 'b', done: false }
-  //  iter.next() // { value: 'c', done: false }
-  //  iter.next() // { value: undefined, done: true }
+
+console.log(2);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   export default {
-    name: 'Index',
+    name: 'Generator',
     data() {
       return {
-        msg: "我是msg a "
+        msg: `  Generator
+        Generator
+        Generator
+        Generator
+        Generator
+        Generator`
       }
     }
-  }
+}
 </script>
