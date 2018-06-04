@@ -3,9 +3,9 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-Vue.config.productionTip = false
+Vue.config.productionTip = false  //是否在启动的时候提示信息
 new Vue({
-  el: '#app',
+  el: '#app', 
   router,
   components: { App },
   template: '<App/>'

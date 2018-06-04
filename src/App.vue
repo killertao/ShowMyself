@@ -3,15 +3,13 @@
     <router-view/>
   </div>
 </template>
-
 <script>
+import Vue from "vue";
+import ElementUI from "element-ui";
+Vue.use(ElementUI,{size:'small'});  
+import "element-ui/lib/theme-chalk/index.css";
 export default {
-  name: 'App'
-}
+  name: "App"
+};
 </script>
-<style>
-  *{
-    margin: 0;
-    padding:0;
-  }
-</style>
+

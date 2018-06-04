@@ -47,7 +47,7 @@
       changeColor(){
         var color=Mock.mock('@rgb');
         this.pTextColor=color;  
-        this.$emit("changeColor",{color});
+        this.$emit("change-color",{color});
       }
     }
   }

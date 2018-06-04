@@ -16,7 +16,7 @@ export default {
   methods: { 
   changeText(event) {
       console.log(this.$refs.input.value)
-      this.$emit('update:inputText',this.$refs.input.value)
+      this.$emit('update:inputText',this.$refs.input.value) //这个是sync的模式 
     }  
   }
 };

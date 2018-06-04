@@ -1,7 +1,6 @@
 <template>
   <div>
-    es66666666666666666666666666666666666666
-    {{msg}}
+    es66666666666666666666666666666666666666 {{msg}}
   </div>
 </template>
 <script>
@@ -29,45 +28,19 @@
 //  console.log(n);
 //}
 
-
-
-
 console.log(2);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  export default {
-    name: 'Generator',
-    data() {
-      return {
-        msg: `  Generator
+export default {
+  name: "Generator",
+  data() {
+    return {
+      msg: `  Generator
         Generator
         Generator
         Generator
         Generator
         Generator`
-      }
-    }
-}
+    };
+  }
+};
 </script>

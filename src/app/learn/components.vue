@@ -13,11 +13,11 @@
     </lt-scope>
   </div>
    
-</template>
+</template>                          
  <script>
 import LtDiv from "@/components/test/simple.vue";
 import LtTwowaybind from "@/components/test/twowaybind.vue";
-import LtScope from "@/components/test/scope.vue";
+import  LtScope from "@/components/test/scope.vue";
 export default {
   name: "Components",
   data() {
