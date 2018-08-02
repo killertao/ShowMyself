@@ -11,12 +11,18 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-      '': {    //将www.exaple.com印射为/apis
+
+        '/':{
+          target:"http://localhost:5200/",
+          changeOrigin: true
+        },
+      'api': {    //将www.exaple.com印射为/apis
         target: 'https://m.10010.com',  // 接口域名
         changeOrigin: true,  //是否跨域
-        // pathRewrite: {
-        //     '^/': ''   //需要rewrite的,
-        // }              
+        pathRewrite: {
+          '^/api': ''   //需要rewrite的,
+        },
+
     }
     },
 

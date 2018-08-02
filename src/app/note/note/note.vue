@@ -1,7 +1,6 @@
 <template>
   <div id="main">
-    <el-tree id="nav" :data="outLineData" :props="defaultProps" 
-    @node-click="handleNodeClick" ></el-tree>
+    <el-tree id="nav" :data="outLineData" :props="defaultProps" @node-click="handleNodeClick"></el-tree>
     <div>
       <div class="operator">
         <el-button type="primary" icon="el-icon-save" @click="save" size="small" v-show="toolbarsFlag">保存</el-button>
@@ -15,17 +14,17 @@
 <script>
 let api = {
   getOutLine: "/note/getOutline",
-  getNote:"/note/getNote",
-  saveNote:"/note/saveNote",
+  getNote: "/note/getNote",
+  saveNote: "/note/saveNote"
 };
 import Ajax from "axios";
-import config from "../../config.js";
+import config from "../config.js";
 export default {
   name: "note",
   data() {
     return {
       outLineData: [],
-      mdData: {content:`lt制作`},
+      mdData: { content: `lt制作` },
       defaultProps: {
         children: "children",
         label: "lable"
@@ -42,27 +41,27 @@ export default {
   methods: {
     handleNodeClick(data) {
       console.log(data);
-       let id=data.id;
-       if(!id){
-         return;
-       }
-       Ajax.get(config.apiUrl(api.getNote),{params:{id}}).then(res=>{
-           this.mdData=res.data.data;
-       })
+      let id = data.id;
+      if (!id) {
+        return;
+      }
+      Ajax.get(config.apiUrl(api.getNote), { params: { id } }).then(res => {
+        this.mdData = res.data.data;
+      });
     },
     edidorActive() {
       this.toolbarsFlag = true;
       this.subfield = true;
       //this.$refs.mdEditor.toolbarsFlag = true;
     },
-    edidorPreview(){
-      this.toolbarsFlag=false;
-      this.subfield=false;
+    edidorPreview() {
+      this.toolbarsFlag = false;
+      this.subfield = false;
     },
-    save(){
-      Ajax.post(config.apiUrl(api.saveNote),this.mdData).then(res=>{
+    save() {
+      Ajax.post(config.apiUrl(api.saveNote), this.mdData).then(res => {
         console.log(res);
-      })
+      });
     }
   }
 };
@@ -81,8 +80,7 @@ export default {
   /* /border-right: solid 2px gray; */
 }
 .operator {
-  text-align:end;
-  padding-right:1rem;
+  text-align: end;
+  padding-right: 1rem;
 }
-
 </style>

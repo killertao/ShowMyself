@@ -16,14 +16,13 @@
     </pager-table>
     <eidt ref="edit"></eidt>
   </div>
-  </div>
 </template>
 <script>
 
 import config from "../../../config.js"
 import Ajax from "axios"
 import PagerTable from "@/components/Pagination"
-import Eidt from "./edit"
+import Eidt from "./important_edit"
 let api = {
   getTableList: config.apiUrl("/information/getAccountList")
 };
@@ -35,7 +34,7 @@ export default {
     };
   },
   created() {
-   
+
   },
   methods: {
     openSave(editData){

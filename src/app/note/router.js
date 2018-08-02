@@ -1,19 +1,19 @@
-import layout from './views/layout.vue'
-import information from './views/information/router.js'
-import note from './views/note/note.vue'
+import layout from './layout.vue'
+import information from './information/router.js'
+import note from './note/note.vue'
 
 export default [{
   path: "/",
   component: layout,
   children: [
-    {
-      path:"",
-      component:note
-    }, 
-    {
-      path: "note",
-      component: note
-    },
+  {
+    path:"",
+    component:note
+  },
+  {
+    path: "note",
+    component: note
+  },
     ...information,
   ]
 }]

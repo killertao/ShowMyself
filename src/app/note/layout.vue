@@ -5,17 +5,17 @@
       <header>
         <el-menu default-active="1" class="el-menu-demo" mode="horizontal">
           <el-menu-item index="1">
-            <template slot="title">
-              <router-link to="/note">笔记</router-link>
-            </template>
-          </el-menu-item>
-          <el-menu-item index="2">
-            <template slot="title">
-              <router-link to="/information">信息中心</router-link>
-            </template>
-          </el-menu-item>
-          <el-menu-item index="3">任务管理</el-menu-item>
-        </el-menu>
+      <template slot="title">
+        <router-link to="/note">笔记</router-link>
+      </template>
+    </el-menu-item>
+      <el-menu-item index="2">
+        <template slot="title">
+          <router-link to="/information">信息中心</router-link>
+        </template>
+      </el-menu-item>
+      <el-menu-item index="3">任务管理</el-menu-item>
+      </el-menu>
       </header>
       <router-view></router-view>
     </div>
@@ -24,13 +24,11 @@
 <script>
 import Vue from "vue";
 import ElementUI from "element-ui";
-Vue.use(ElementUI,{size:'small'});  
+Vue.use(ElementUI,{size:'small'});
 import "element-ui/lib/theme-chalk/index.css";
 import mavonEditor from "mavon-editor";
 import "mavon-editor/dist/css/index.css";
 Vue.use(mavonEditor);
-import "../mockdata/api.note";
-
 export default {
   name: "NoteLayout",
   data() {
