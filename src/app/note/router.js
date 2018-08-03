@@ -8,7 +8,7 @@ export default [{
   children: [
   {
     path:"",
-    component:note
+    component:note,
   },
   {
     path: "note",

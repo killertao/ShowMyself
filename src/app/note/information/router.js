@@ -1,15 +1,21 @@
-import birthday from './views/birthday_list.vue'
-import layout from './views/information_layout.vue'
+import layout from './views/information_layout'
+import birthday from './views/birthday_list'
+import important from "./views/important_list"
 export default [{
   path: "information",
   component: layout,
   children: [{
       path: "",
-      component: birthday
+      component: important
     },
     {
       path: "birthday",
       component: birthday
+    },
+    {
+      path: "important",
+      component: important
     }
+
   ]
 }]

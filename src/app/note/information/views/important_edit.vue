@@ -16,7 +16,7 @@
 </template>
 <script>
 import Ajax from "axios";
-import config from "../../../config";
+import config from "../../config";
 let api = {
   getDetail: "",
   save: ""

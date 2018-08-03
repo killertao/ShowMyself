@@ -19,8 +19,7 @@
 </template>
 <script>
 
-import config from "../../../config.js"
-import Ajax from "axios"
+import config from "../../config.js"
 import PagerTable from "@/components/Pagination"
 import Eidt from "./important_edit"
 let api = {
