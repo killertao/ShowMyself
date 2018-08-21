@@ -1,27 +1,17 @@
-import  axios from "axios"
-class  Birthday {
-   constructor(){
-     this.api={
-       getAll:"",
-       getPage:"",
-       edit:"",
-       del:"",
-       add:"/birthday/add",
-     };
-   }
-   getALL(){
-     return  axios.get(this.api.getPage)
-   }
-   edit(data){
-    return   axios.post(this.api.edit,data);
-   }
-   del(data){
-     return axios.post(this.api.del,data);
-   }
-   add(data){
-     return axios.post(this.api.add,data);
-   }
+import {TableList,CRUD,Ajax} from "@/elementui_extend/index"
 
+class Birthday extends CRUD {
+  constructor() {
+    super();
+    this.api = {
+      getPage: "/birthday/list",
+      edit: "",
+      del: "",
+      add: "/birthday/add",
+    };
+    this.tableList = new TableList(this.api.getPage);
+    this.tableList.columns={name:"标题",birthday:"生日"};
+  }
 }
 
-export default  Birthday;
+export default Birthday;

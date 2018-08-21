@@ -4,11 +4,17 @@
 // import extendComponents from './extendComponents.vue'
 // import Promise from './promise.vue'
 //import Turntable from './turntable'
+
 import  learnvue from "./vue/router";
 import  javascript from "./javasrcipt/router";
+import  component from "./component/router";
+import css from "./css/router"
 export default [
   ...learnvue,
   ...javascript,
+  ...component,
+  ...css,
+
   // {
   //   name: 'learn_index',
   //   path: '/learn/index',

@@ -1,24 +1,31 @@
 <template>
-<div>
+  <div>
     <div class="button">
-        <el-button @click="add">添加</el-button>
+      <el-button @click="add">添加</el-button>
     </div>
-  <birthday-add ref="add"></birthday-add>
-</div>
+    <my-table :table="model.tableList">
+    </my-table>
+    <birthday-add ref="add"></birthday-add>
+  </div>
 </template>
 <script>
-  import  Birthday from "@/api/note/birdthday";
-  import  BirthdayAdd from "./birthday_add";
-  let model=new Birthday();
+  import Birthday from "@/api/note/birdthday";
+  import BirthdayAdd from "./birthday_add";
+  import MyTable from "@/elementui_extend/component/table"
+  let model = new Birthday();
   export default {
-    components:{BirthdayAdd},
-    data(){
-        return {
-        }
+    components: {BirthdayAdd,MyTable},
+    data() {
+      return {
+        model:model,
+      }
     },
-    methods:{
-      add(){
-          this.$refs.add.init();
+    created(){
+      model.tableList.load();
+    },
+    methods: {
+      add() {
+        this.$refs.add.init();
       }
     }
   }

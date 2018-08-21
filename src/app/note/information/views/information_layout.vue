@@ -1,44 +1,54 @@
 <template>
   <div class="container">
-    <div class="left">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <router-view class="body">
-    </router-view>
+      <div class="left">
+          <menu-base :menus="menus" height="40px"  :vertical="true"></menu-base>
+      </div>
+      <div class="main-content">
+        <router-view class="body">
+        </router-view>
+      </div>
   </div>
 </template>
 <script>
+  import menuBase from "@/components/menu/menu_base"
+
   export default {
+    components: {menuBase},
     data() {
-      return {}
+      return {
+        menus: [{
+          path: "/information/birthday",
+          title: "生日",
+        }, {
+          path: "/information/important",
+          title: "重要信息",
+        }]
+      }
+    },
+    created(){
+
     }
   };
 </script>
 <style lang="less">
   .container {
     display: flex;
+    height: 100%;
     .left {
-      flex-basis: 100px;
+      width: 150px;
       background-color: #fff;
       margin-right: 5px;
-      p {
-        text-align: center;
-        width: 180px;
-        height: 2.5rem;
-        line-height: 2.5rem;
-        border-bottom: 1px solid #bbb2b2;
-      }
-      p.active {
-        background-color: rgb(154, 215, 231);
-      }
-    }
-    .body {
-      background-color: #fff;
-      width: 100%;
-    }
 
+    }
+    .main-content {
+      background-color: #fff;
+      flex-grow: 1;
+      padding-top: 10px;
+      padding-left: 10px;
+    }
+    .body{
+      display: inline-block;
+    }
   }
 </style>
 

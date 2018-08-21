@@ -1,6 +1,6 @@
 <template>
 
-  <el-table :data="tableList">
+  <el-table :data="tableList" border>
     <slot></slot>
     <template slot="append">
       <div class="pager">

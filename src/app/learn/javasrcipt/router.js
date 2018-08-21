@@ -1,6 +1,7 @@
 let rootPath="/javascript/";
 import object from "./object";
 import jszip from "./jszip";
+import event from "./event";
 export default [
     {
         path:rootPath+"object",
@@ -9,5 +10,8 @@ export default [
     {
         path:rootPath+"jszip",
         component:jszip
-    }
+    },{
+    path:rootPath+"event",
+    component:event
+  }
 ]

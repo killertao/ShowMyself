@@ -41,7 +41,7 @@
         };
     },
     mounted(){
-      this.contentHeight=document.body.offsetHeight-document.querySelector("#header").outerHeigh();
+      this.contentHeight=document.documentElement.clientHeight-document.querySelector("#header").outerHeigh();
     },
     methods:{
       menuActive(menu,index){
@@ -59,7 +59,7 @@
   @mainWidth:80%;
   #container {
     background-color: @bgbody;
-    height: 100vh;
+    //height: 100vh;
     display: flex;
     flex-wrap: wrap;
     justify-content:center;

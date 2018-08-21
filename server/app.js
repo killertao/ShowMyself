@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({extended: true})); // for parsing application/x-w
 routers.forEach(router => {
   app.use(router);
 });
-app.set("trust proxy", 1);//设置....
+app.set("trust proxy", 1);//设置
 //对某个接口进行监听
 app.listen(5200, function () {
   console.log("访问地址为localhost:5200");
